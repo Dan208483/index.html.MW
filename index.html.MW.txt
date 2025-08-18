@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieWorld</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🎬 MovieWorld</div>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Cartelera</a>
+      <a href="#">Próximos</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenido a MovieWorld</h1>
+    <p>Tu lugar para descubrir las mejores películas</p>
+    <button>Ver Cartelera</button>
+  </section>
+
+  <section class="movies">
+    <h2>Cartelera</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://picsum.photos/200/300?1" alt="Poster 1">
+        <h3>Película 1</h3>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/300?2" alt="Poster 2">
+        <h3>Película 2</h3>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/300?3" alt="Poster 3">
+        <h3>Película 3</h3>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/300?4" alt="Poster 4">
+        <h3>Película 4</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MovieWorld. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
