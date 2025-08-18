@@ -41,8 +41,9 @@ header h1 {
 .movie-grid {
     padding: 30px 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    justify-items: center;
 }
 
 .movie-item img {
@@ -52,3 +53,4 @@ header h1 {
     border-radius: 15px;
     border: 2px solid #000;
 }
+
