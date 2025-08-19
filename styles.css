@@ -77,5 +77,6 @@ header h1 {
     height: 400px;
     object-fit: cover;
     border-radius: 0px;
-    border: 2px solid #000;
+    border: 0px solid #000;
 }
+
