@@ -6,64 +6,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <h1>MovieWorld</h1>
-    </header>
+<header>
+    <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <h1>MovieWorld</h1>
+</header>
 
-    <nav class="nav-menu" id="navMenu">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-        </ul>
-    </nav>
-    
-    <!-- CONTENEDOR DE PELÍCULAS -->
-    <section class="movie-grid">
-        <div class="movie-item"><img src="img/jumanji.jpg" alt="Jumanji"></div>
-        <div class="movie-item"><img src="img/civilwar.jpg" alt="Civil War"></div>
-        <div class="movie-item"><img src="img/lightyear.jpg" alt="Lightyear"></div>
-        <div class="movie-item"><img src="img/megan.jpg" alt="Megan"></div>
-        <div class="movie-item"><img src="img/harrypotter.jpg" alt="Harry Potter"></div>
-        <div class="movie-item"><img src="img/toystory4.jpg" alt="Toy Story 4"></div>
-        <div class="movie-item"><img src="img/gladiator.jpg" alt="Gladiator"></div>
-        <div class="movie-item"><img src="img/rambo.jpg" alt="Rambo"></div>
-    </section>
+<nav class="nav-menu" id="navMenu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+    </ul>
+</nav>
 
-     <!-- SECCIÓN HOME -->
-    <section class="section-info" id="home">
-        <h2>Bienvenido a MovieWorld</h2>
-        <p>Tu universo cinematográfico favorito, descubre los mejores estrenos y clásicos.</p>
-    </section>
+<section class="movie-grid">
+    <div class="movie-item"><img src="img/jumanji.jpg" alt="Jumanji"></div>
+    <div class="movie-item"><img src="img/civilwar.jpg" alt="Civil War"></div>
+    <div class="movie-item"><img src="img/lightyear.jpg" alt="Lightyear"></div>
+    <div class="movie-item"><img src="img/megan.jpg" alt="Megan"></div>
+    <div class="movie-item"><img src="img/harrypotter.jpg" alt="Harry Potter"></div>
+    <div class="movie-item"><img src="img/toystory4.jpg" alt="Toy Story 4"></div>
+    <div class="movie-item"><img src="img/gladiator.jpg" alt="Gladiator"></div>
+    <div class="movie-item"><img src="img/rambo.jpg" alt="Rambo"></div>
+</section>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section class="section-info" id="contacto">
-        <h2>Contacto</h2>
-        <p>Para consultas puedes escribirnos a: movieworld@email.com</p>
-    </section>
+<script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const navMenu  = document.getElementById('navMenu');
 
-    <!-- SECCIÓN NOSOTROS -->
-    <section class="section-info" id="nosotros">
-        <h2>Nosotros</h2>
-        <p>Somos una plataforma dedicada a compartir las mejores películas y experiencias del cine.</p>
-    </section>
-
-    <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const navMenu = document.getElementById('navMenu');
-
-        menuIcon.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-    </script>
+    menuIcon.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+</script>
 </body>
 </html>
-
-
-
