@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <meta charset="UTF-8">
+    
+    <!-- ✅ Hace que la web se adapte al tamaño del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>MovieWorld</title>
+
+    <!-- ✅ Carga TailwindCSS (para usar clases responsive sin escribir CSS manual) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Si quieres mantener tu propio CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header>
-    <div class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <h1>MovieWorld</h1>
-</header>
 
-<nav class="nav-menu" id="navMenu">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-    </ul>
-</nav>
+<body class="bg-gray-100 text-gray-900">
+    <!-- 🔹 Encabezado con menú -->
+    <header class="flex justify-between items-center bg-blue-800 text-white p-4">
+        <div class="menu-icon flex flex-col gap-1 cursor-pointer md:hidden">
+            <span class="block w-6 h-1 bg-white"></span>
+            <span class="block w-6 h-1 bg-white"></span>
+            <span class="block w-6 h-1 bg-white"></span>
+        </div>
+        <h1 class="text-2xl font-bold">MovieWorld</h1>
+    </header>
 
-<section class="movie-grid">
-    <div class="movie-item"><img src="img/jumanji.jpg" alt="Jumanji"></div>
-    <div class="movie-item"><img src="img/civilwar.jpg" alt="Civil War"></div>
-    <div class="movie-item"><img src="img/lightyear.jpg" alt="Lightyear"></div>
-    <div class="movie-item"><img src="img/megan.jpg" alt="Megan"></div>
-    <div class="movie-item"><img src="img/harrypotter.jpg" alt="Harry Potter"></div>
-    <div class="movie-item"><img src="img/toystory4.jpg" alt="Toy Story 4"></div>
-    <div class="movie-item"><img src="img/gladiator.jpg" alt="Gladiator"></div>
-    <div class="movie-item"><img src="img/rambo.jpg" alt="Rambo"></div>
-</section>
+    <!-- 🔹 Menú de navegación -->
+    <nav id="navMenu" class="nav-menu hidden md:block bg-blue-700 text-white">
+        <ul class="flex flex-col md:flex-row justify-center md:space-x-8 text-center p-4">
+            <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+            <li><a href="contacto.html" class="hover:text-yellow-400">Contacto</a></li>
+            <li><a href="nosotros.html" class="hover:text-yellow-400">Nosotros</a></li>
+        </ul>
+    </nav>
 
-<script>
-    const menuIcon = document.querySelector('.menu-icon');
-    const navMenu  = document.getElementById('navMenu');
+    <!-- 🔹 Cuadrícula de películas -->
+    <section class="movie-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
+        <div class="movie-item"><img src="img/jumanji.jpg" alt="Jumanji" class="w-full h-auto rounded-lg shadow-lg"></div>
+        <div class="movie-item"><img src="img/civilwar.jpg" alt="Civil War" class="w-full h-auto rounded-lg shadow-lg"></div>
+        <div class="movie-item"><img src="img/lightyear.jpg" alt="Lightyear" class="w-full h-auto rounded-lg shadow-lg"></div>
+        <div class="movie-item"><img src="img/megan.jpg" alt="Megan" class="w-full h-auto rounded-lg shadow-lg"></div>
+        <div class="movie-item"><img src="img/harrypotter.jpg" alt="Harry Potter" class="w-full h-auto rounded-lg shadow-lg"></div>
+        <div class="movie-item"><img src="img/toystory4.jpg" alt="Toy Story 4" class="w-full h-auto rounded-lg shadow-lg"></div>
+        <div class="movie-item"><img src="img/gladiator.jpg" alt="Gladiator" class="w-full h-auto rounded-lg shadow-lg"></div>
+        <div class="movie-item"><img src="img/rambo.jpg" alt="Rambo" class="w-full h-auto rounded-lg shadow-lg"></div>
+    </section>
 
-    menuIcon.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-    });
-</script>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navMenu  = document.getElementById('navMenu');
+
+        menuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
-
